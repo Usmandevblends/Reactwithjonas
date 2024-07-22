@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <center>
-        <h1>Hello World!</h1>
+        <h1>Hello This is first react app</h1>
         <button onClick={getadvice}>Get advice</button>
       </center>
     </>
