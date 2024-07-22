@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 function App() {
-  async function getadvice() {
+const [advice, setAdvice] = useState('');
+const [count, setCount] = useState(0);
+
+  async function getAdvice() {
     const response = await fetch("https://api.adviceslip.com/advice");
     const data = await response.json();
-    console.log(data);
+    setAdvice(data.slip.advice);
+    setCount((c) => c + 1);
+    
   }
   return (
     <>
       <center>
-        <h1>Hello This is first react app</h1>
-        <button onClick={getadvice}>Get advice</button>
+        <h1>{advice}</h1>
+        <button onClick={getAdvice}>Get advice</button>
+        <p>You have read <strong>{count}</strong> pieces of advice</p>
       </center>
     </>
   );
