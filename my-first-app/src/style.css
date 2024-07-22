@@ -2,10 +2,16 @@ body {
     background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
     user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
 }
 
 h1 {
     color: aliceblue;
+    font-size: 1.5rem;
+    line-height: 50px;
 }
 
 button {
@@ -20,7 +26,7 @@ button {
 
 p {
     color: #fff;
-    font-size: 2rem;
+    line-height: 50px;
 }
 
 strong {
