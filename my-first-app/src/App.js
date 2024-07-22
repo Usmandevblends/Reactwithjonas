@@ -1,14 +1,19 @@
-import React from 'react'
-import './style.css'
+import React from "react";
+import "./style.css";
 function App() {
+  async function getadvice() {
+    const response = await fetch("https://api.adviceslip.com/advice");
+    const data = await response.json();
+    console.log(data);
+  }
   return (
     <>
-        <center>
+      <center>
         <h1>Hello World!</h1>
-        <button>Get advice</button>
-        </center>
+        <button onClick={getadvice}>Get advice</button>
+      </center>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
