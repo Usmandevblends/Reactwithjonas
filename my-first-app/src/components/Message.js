@@ -3,7 +3,7 @@ import React from "react";
 function Message(props) {
   return (
     <>
-      <p> You have read <strong>{props.count}</strong> pieces of advice</p>
+      <p className="py-2"> You have read <strong>{props.count}</strong> pieces of advice</p>
     </>
   );
 }

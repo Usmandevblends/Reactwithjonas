@@ -5,10 +5,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Roboto', sans-seri
 }
 
 h1 {
-    color: aliceblue;
+    color: aliceblue !important;
     font-size: 1.5rem;
 }
 

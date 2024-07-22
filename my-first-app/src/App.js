@@ -9,10 +9,12 @@ function App() {
   const [count, setCount] = useState(0);
 
   async function getAdvice() {
-    const response = await fetch("https://api.adviceslip.com/advice");
-    const data = await response.json();
-    setAdvice(data.slip.advice);
-    setCount((c) => c + 1);
+    if (count < 10) { // Add this conditional statement
+      const response = await fetch("https://api.adviceslip.com/advice");
+      const data = await response.json();
+      setAdvice(data.slip.advice);
+      setCount((c) => c + 1);
+    }
   }
 
   useEffect(function () {
@@ -21,12 +23,12 @@ function App() {
 
   return (
     <>
-      {/* <center>
-        <h1>{advice}</h1>
-        <button onClick={getAdvice}>Get advice</button>
+      <center>
+        <h1 className="py-2">{advice}</h1>
+        <button onClick={getAdvice} className="py-2 rounded-5">Get advice</button>
         <Message count={count} />
-      </center> */}
-      < State />
+      </center>
+      <State />
     </>
   );
 }
