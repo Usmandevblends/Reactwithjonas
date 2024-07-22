@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Message from "./components/Message";
+import State from "./components/State";
 
 function App() {
   const [advice, setAdvice] = useState("");
@@ -19,11 +21,12 @@ function App() {
 
   return (
     <>
-      <center>
+      {/* <center>
         <h1>{advice}</h1>
         <button onClick={getAdvice}>Get advice</button>
         <Message count={count} />
-      </center>
+      </center> */}
+      < State />
     </>
   );
 }
